@@ -2,45 +2,36 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-
-		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-		Remove this if you use the .htaccess -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-		<title>index</title>
-		<meta name="description" content="">
-		<meta name="author" content="Omar">
-
-		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<title>WCORE</title>
+		<link rel="stylesheet" type="text/css" href="./CSS/menusLeft.css">
 	</head>
-
 	<body>
-		<div>
-			<header>
-				<h1>index</h1>
-			</header>
-			<nav>
-				<p>
-					<a href="/">Home</a>
-				</p>
-				<p>
-					<a href="/contact">Contact</a>
-				</p>
-			</nav>
-
-			<div>
-
+		<div class="wcore_clientsList wcore_menuVisible">
+			<div class="wcore_mainLogo">
+				<img src="./IMGs/Logo_white_300.png" width="250"/>
 			</div>
-
-			<footer>
-				<p>
-					&copy; Copyright  by Omar
-				</p>
-			</footer>
+			<div class="wcore_menuTitle">
+				Clientes
+			</div>
+			
+			<div class="wcore_search_bar">
+				<input type="text" id="wcore_search_input_field" title="Búsqueda automática"/>
+			</div>
+			<div class="wcore_menu_table">
+				<div class="wcore_menu_opholder">
+					<div id="wcore_client_add" title="Agregar Usuario"></div>
+				</div>
+				<div class="wcore_menu_opholder">
+					<div id="wcore_client_edit" title="Editar Usuario"></div>
+				</div>
+				<div class="wcore_menu_opholder">
+					<div id="wcore_client_bin">
+						<div id="wcore_client_lid" title="Eliminar Usuario"></div>
+					</div>
+				</div>
+			</div>
 		</div>
+		<div class="wcore_majorOptions wcore_menuVisible"></div>
+		<div class="wcore_minorOptions wcore_menuVisible"></div>
 	</body>
 </html>
