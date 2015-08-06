@@ -5,20 +5,31 @@ body{
 
 .wcore_menuVisible{
 	width:350px;
+	transition:width 0.5s ease-out;
+	height:100%;
+	float:left;
+}
+
+.wcore_menuInVisible{
+	width:0px;
+	transition:width 0.5s ease-in;
 	height:100%;
 	float:left;
 }
 
 .wcore_clientsList{
 	background-color:#63cf63;
+	overflow: hidden;
 }
 
 .wcore_majorOptions{
 	background-color:#90E662;
+	overflow: hidden;
 }
 
 .wcore_minorOptions{
 	background-color:#B6DC5E;
+	overflow: hidden;
 }
 
 .wcore_mainLogo{
@@ -68,6 +79,102 @@ body{
 	background-image: url("../IMGs/circle.png");
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.wcore_client_icon{
+	height: 60px;
+	width: 60px;
+	margin: 5px 0px;
+	float: left;
+	background-image: url("../IMGs/client.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.wcore_client_hat{
+	height: 60px;
+	width: 60px;
+	background-image: url("../IMGs/hat.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: transform 0.2s linear;
+	transform-origin: 20% 30%;
+}
+
+.wcore_client_hat:hover{
+	transform: rotate(-20deg);
+}
+
+.wcore_client_info{
+	margin-left: 60px;
+	width: 230px;/*Due to padding*/
+	height: 50px;/*Due to padding*/
+	padding: 10px 0px;
+}
+
+.wcore_client_name{
+	width: 100%;
+	overflow: hidden;
+}
+
+.wcore_client_name_holder{
+	margin: 0;
+	padding: 0;
+	color: white;
+    font-size: 16pt;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	white-space: nowrap;
+	position: relative;
+}
+
+.wcore_client_name_holder:hover{
+	overflow: visible;
+	animation-name: flyText;
+	animation-duration: 4s;
+}
+
+.wcore_client_RFC{
+	margin: 0;
+	padding: 0;
+	color: white;
+    font-size: 16pt;
+}
+
+.wcore_clientsData{
+	height:calc(100% - 265px);
+	width:100%;
+	margin:0px 20px;
+	padding-right:20px;
+	overflow-y:auto;
+}
+
+/*.wcore_clientsData::-webkit-scrollbar { width: 0 !important }*/
+
+.wcore_clientBox{
+	border: white thin dashed;
+	width:308px;
+}
+
+.wcore_scrollAway{
+	padding-right:20px;
+	width:100%;
+	height:100%;
+	overflow-y:auto;
+}
+
+.wcore_primCat{
+	width:338px;
+	height:100px;
+	line-height:100px;
+	margin: 5px;
+	/*padding: 25px 0px;*/
+	text-align:center;
+	color:#f2f2f2;
+	font-size:20pt;
+	font-weight:bold;
+	border: dashed white thin;
 }
 
 #wcore_client_add{
@@ -139,4 +246,10 @@ body{
 	60%{transform: rotate(-10deg) translateY(-3px);}
 	70%{transform: rotate(0deg) translateY(-3px);}
 	100%{transform: translateY(0px);}
+}
+
+@keyframes flyText{
+	0%{transform: translateX(0);}
+	95%{transform: translateX(-100%);}
+	100%{transform: translateX(0);}
 }
