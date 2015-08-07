@@ -162,6 +162,7 @@ body{
 	width:100%;
 	background-color:#63CF63;
 	transition: background-color 0.5s linear;
+	transition-delay:0.25s;
 }
 
 .wcore_client_selected{

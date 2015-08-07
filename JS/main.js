@@ -18,17 +18,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	req.onerror = function(){alert('Error de conexión en login!');};
 });
 
+
+
 function add_client_listeners(){
 	var cat_links = document.getElementsByClassName("wcore_clientBox"); var n = cat_links.length;
 	for(i = 0;i < n;i++){
 		cat_links[i].addEventListener('click',function(){
-			var all_clients = this.parentNode.parentNode.childNodes; var n = all_clients.length;
-			for(i = 0;i < n;i++){
-				all_clients[i].className = "wcore_clientExBox";
-			}
-			this.parentNode.className = "wcore_client_selected";
 			var menu = document.getElementById('wcore_major');
-			menu.className = "wcore_majorOptions wcore_menuVisible";
+			if(this.parentNode.className == "wcore_client_selected"){
+				this.parentNode.className = "wcore_clientExBox";
+				menu.className = "wcore_majorOptions wcore_menuInVisible";
+			}else{
+				var all_clients = this.parentNode.parentNode.childNodes; var n = all_clients.length;
+				for(i = 0;i < n;i++){
+					if(all_clients[i].className == "wcore_client_selected"){all_clients[i].className = "wcore_clientExBox";}
+				}
+				this.parentNode.className = "wcore_client_selected";
+				menu.className = "wcore_majorOptions wcore_menuVisible";
+			}
 		});
 	}
 	return false;
